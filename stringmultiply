@@ -1,6 +1,6 @@
 main :: IO()
 
-mltpl :: String -> String
+mltpl :: String int -> String
 mltpl str n = str <> (n > 0) ? ([' '] <> (mltpl str (n-1))) : [""]
 
 B = "BABY"
