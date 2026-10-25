@@ -5,5 +5,5 @@ mltpl str n = str <> (n > 0) ? ([' '] <> (mltpl str (n-1))) : [""]
 
 B = "BABY"
 
-main do
+main = do
     putStr $ mltpl B 3
