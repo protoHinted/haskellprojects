@@ -1,7 +1,9 @@
-std :: MainIO()
+main :: IO()
 
 mltpl :: String -> String
-mltpl str n : str <> (n > 0) ? ([' '] <> (mltpl str (n-1))) : [""]
+mltpl str n = str <> (n > 0) ? ([' '] <> (mltpl str (n-1))) : [""]
 
-String B <- mltpl "BABY" 3:
-    putStr B
+B = "BABY"
+
+main do
+    putStr $ mltpl B 3
