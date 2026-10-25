@@ -1,0 +1,7 @@
+std :: MainIO()
+
+mltpl :: String -> String
+mltpl str n : str <> (n > 0) ? ([' '] <> (mltpl str (n-1))) : [""]
+
+String B <- mltpl "BABY" 3:
+    putStr B
